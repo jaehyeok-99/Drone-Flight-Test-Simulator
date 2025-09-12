@@ -1,0 +1,18 @@
+fileFormatVersion: 2
+guid: ba0692faa6ad40a4cb68dddc2577af03
+MonoImporter:
+  externalObjects: {}
+  serializedVersion: 2
+  defaultReferences: []
+  executionOrder: 0
+  icon: {instanceID: 0}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 111163
+  packageName: Drone Controller PRO
+  packageVersion: 2.0
+  assetPath: Assets/Packages/DroneController/Scripts/Controllers/DroneMovement.cs
+  uploadId: 597116

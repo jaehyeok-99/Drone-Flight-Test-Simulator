@@ -1,0 +1,15 @@
+fileFormatVersion: 2
+guid: a6ed360f498364e39a094541bad2923d
+timeCreated: 1473358288
+licenseType: Store
+NativeFormatImporter:
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 111163
+  packageName: Drone Controller PRO
+  packageVersion: 2.0
+  assetPath: Assets/Packages/DroneController/Visuals/Models/Drones/Buzzer/Materials/Buzzer.mat
+  uploadId: 597116

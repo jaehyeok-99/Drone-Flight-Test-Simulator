@@ -1,0 +1,14 @@
+fileFormatVersion: 2
+guid: 350ab80a254bf6c4ea549937a190e08e
+PrefabImporter:
+  externalObjects: {}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 111163
+  packageName: Drone Controller PRO
+  packageVersion: 2.0
+  assetPath: Assets/Packages/DroneController/Visuals/Models/Drones/Splinter/Prefabs/Splinter.prefab
+  uploadId: 597116

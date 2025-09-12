@@ -1,0 +1,18 @@
+fileFormatVersion: 2
+guid: dd4a0ec22da1703429bde512f2e32523
+MonoImporter:
+  externalObjects: {}
+  serializedVersion: 2
+  defaultReferences: []
+  executionOrder: 0
+  icon: {instanceID: 0}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 111163
+  packageName: Drone Controller PRO
+  packageVersion: 2.0
+  assetPath: Assets/Packages/DroneController/Scripts/Managers/InputManager.cs
+  uploadId: 597116

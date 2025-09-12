@@ -1,0 +1,15 @@
+fileFormatVersion: 2
+guid: 0a7c5bcb9b866e545abfa69ce459772b
+NativeFormatImporter:
+  externalObjects: {}
+  mainObjectFileID: 11400000
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 111163
+  packageName: Drone Controller PRO
+  packageVersion: 2.0
+  assetPath: Assets/Packages/DroneController/Data/DroneMovementData/DroneMovementData.asset
+  uploadId: 597116

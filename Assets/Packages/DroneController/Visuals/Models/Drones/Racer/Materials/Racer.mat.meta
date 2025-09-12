@@ -1,0 +1,16 @@
+fileFormatVersion: 2
+guid: bd389a4d44d4a9f45afacbd5ade16321
+timeCreated: 1515930892
+licenseType: Store
+NativeFormatImporter:
+  mainObjectFileID: 2100000
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 111163
+  packageName: Drone Controller PRO
+  packageVersion: 2.0
+  assetPath: Assets/Packages/DroneController/Visuals/Models/Drones/Racer/Materials/Racer.mat
+  uploadId: 597116

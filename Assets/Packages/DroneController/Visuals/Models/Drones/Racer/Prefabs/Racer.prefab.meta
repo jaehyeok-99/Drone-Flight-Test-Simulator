@@ -1,0 +1,14 @@
+fileFormatVersion: 2
+guid: 6c5f4cc7bbdd1184d8d10520439d6a0a
+PrefabImporter:
+  externalObjects: {}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 111163
+  packageName: Drone Controller PRO
+  packageVersion: 2.0
+  assetPath: Assets/Packages/DroneController/Visuals/Models/Drones/Racer/Prefabs/Racer.prefab
+  uploadId: 597116

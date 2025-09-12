@@ -1,0 +1,15 @@
+fileFormatVersion: 2
+guid: 1384aaa7a55f74516b500852dd4a022d
+timeCreated: 1474018164
+licenseType: Store
+DefaultImporter:
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 111163
+  packageName: Drone Controller PRO
+  packageVersion: 2.0
+  assetPath: Assets/Packages/DroneController/Scenes/Drone-Racer.unity
+  uploadId: 597116

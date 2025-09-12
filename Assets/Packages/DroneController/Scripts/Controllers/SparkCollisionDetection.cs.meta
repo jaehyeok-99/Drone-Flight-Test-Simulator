@@ -1,0 +1,18 @@
+fileFormatVersion: 2
+guid: 7891cc64b6014e447baa1ee1c860ede3
+MonoImporter:
+  externalObjects: {}
+  serializedVersion: 2
+  defaultReferences: []
+  executionOrder: 0
+  icon: {instanceID: 0}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 111163
+  packageName: Drone Controller PRO
+  packageVersion: 2.0
+  assetPath: Assets/Packages/DroneController/Scripts/Controllers/SparkCollisionDetection.cs
+  uploadId: 597116

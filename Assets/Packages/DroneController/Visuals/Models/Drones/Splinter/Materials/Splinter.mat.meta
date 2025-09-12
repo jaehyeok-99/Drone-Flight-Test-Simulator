@@ -1,0 +1,15 @@
+fileFormatVersion: 2
+guid: a3c769c6258e5498289ed801f90be2f2
+timeCreated: 1474273022
+licenseType: Store
+NativeFormatImporter:
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 111163
+  packageName: Drone Controller PRO
+  packageVersion: 2.0
+  assetPath: Assets/Packages/DroneController/Visuals/Models/Drones/Splinter/Materials/Splinter.mat
+  uploadId: 597116

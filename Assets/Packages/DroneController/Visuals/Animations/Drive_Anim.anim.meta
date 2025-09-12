@@ -1,0 +1,15 @@
+fileFormatVersion: 2
+guid: 23ed94b4bac9645f18d28a2be5fa63cb
+timeCreated: 1476739285
+licenseType: Store
+NativeFormatImporter:
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 111163
+  packageName: Drone Controller PRO
+  packageVersion: 2.0
+  assetPath: Assets/Packages/DroneController/Visuals/Animations/Drive_Anim.anim
+  uploadId: 597116

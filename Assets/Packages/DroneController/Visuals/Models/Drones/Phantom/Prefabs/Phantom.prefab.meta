@@ -1,0 +1,14 @@
+fileFormatVersion: 2
+guid: 07f207f8048c663449964c0062465474
+PrefabImporter:
+  externalObjects: {}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 111163
+  packageName: Drone Controller PRO
+  packageVersion: 2.0
+  assetPath: Assets/Packages/DroneController/Visuals/Models/Drones/Phantom/Prefabs/Phantom.prefab
+  uploadId: 597116

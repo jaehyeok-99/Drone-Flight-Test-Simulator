@@ -1,0 +1,15 @@
+fileFormatVersion: 2
+guid: c0e3b9d5466854371815c0bd02f48800
+timeCreated: 1461412381
+licenseType: Store
+NativeFormatImporter:
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 111163
+  packageName: Drone Controller PRO
+  packageVersion: 2.0
+  assetPath: Assets/Packages/DroneController/Visuals/Models/Drones/Phantom/Materials/Phantom.mat
+  uploadId: 597116

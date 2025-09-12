@@ -1,0 +1,16 @@
+fileFormatVersion: 2
+guid: bf039202b2842e54da336f031acf9908
+timeCreated: 1516463344
+licenseType: Store
+NativeFormatImporter:
+  mainObjectFileID: 100100000
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 111163
+  packageName: Drone Controller PRO
+  packageVersion: 2.0
+  assetPath: Assets/Packages/DroneController/Prefabs/Drones/Drone-Buzzer.prefab
+  uploadId: 597116

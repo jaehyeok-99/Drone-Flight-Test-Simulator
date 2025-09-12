@@ -1,0 +1,15 @@
+fileFormatVersion: 2
+guid: ddfc9fa380c6b2a4a837d293521bf1af
+timeCreated: 1474018164
+licenseType: Store
+DefaultImporter:
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 111163
+  packageName: Drone Controller PRO
+  packageVersion: 2.0
+  assetPath: Assets/Packages/DroneController/Scenes/Drone-Buzzer.unity
+  uploadId: 597116

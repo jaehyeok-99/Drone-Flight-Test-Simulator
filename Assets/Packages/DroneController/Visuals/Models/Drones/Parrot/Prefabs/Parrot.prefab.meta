@@ -1,0 +1,14 @@
+fileFormatVersion: 2
+guid: 26a99c32318744248943f4338f8c8180
+PrefabImporter:
+  externalObjects: {}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 111163
+  packageName: Drone Controller PRO
+  packageVersion: 2.0
+  assetPath: Assets/Packages/DroneController/Visuals/Models/Drones/Parrot/Prefabs/Parrot.prefab
+  uploadId: 597116

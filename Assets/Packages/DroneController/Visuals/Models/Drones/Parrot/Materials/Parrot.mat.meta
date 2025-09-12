@@ -1,0 +1,15 @@
+fileFormatVersion: 2
+guid: c4aa33128d7774dd9ac57f6e96e50a4c
+timeCreated: 1463691171
+licenseType: Store
+NativeFormatImporter:
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 111163
+  packageName: Drone Controller PRO
+  packageVersion: 2.0
+  assetPath: Assets/Packages/DroneController/Visuals/Models/Drones/Parrot/Materials/Parrot.mat
+  uploadId: 597116

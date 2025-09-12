@@ -1,0 +1,14 @@
+fileFormatVersion: 2
+guid: 2991e4a4fe0b53d4bb6a7f0ef6f46524
+PrefabImporter:
+  externalObjects: {}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 111163
+  packageName: Drone Controller PRO
+  packageVersion: 2.0
+  assetPath: Assets/Packages/DroneController/Prefabs/Visualizers/InputVisualizer(Canvas).prefab
+  uploadId: 597116

@@ -1,0 +1,15 @@
+fileFormatVersion: 2
+guid: c9cec3a1531284c4285c686a477f74ca
+timeCreated: 1476866152
+licenseType: Store
+NativeFormatImporter:
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 111163
+  packageName: Drone Controller PRO
+  packageVersion: 2.0
+  assetPath: Assets/Packages/DroneController/Visuals/Animations/right_passage.anim
+  uploadId: 597116

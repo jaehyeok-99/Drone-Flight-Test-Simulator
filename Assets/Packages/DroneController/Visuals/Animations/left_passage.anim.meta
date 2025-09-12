@@ -1,0 +1,15 @@
+fileFormatVersion: 2
+guid: dcc58ef87e2de46daba80d581993a578
+timeCreated: 1476866105
+licenseType: Store
+NativeFormatImporter:
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 111163
+  packageName: Drone Controller PRO
+  packageVersion: 2.0
+  assetPath: Assets/Packages/DroneController/Visuals/Animations/left_passage.anim
+  uploadId: 597116

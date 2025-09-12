@@ -1,0 +1,15 @@
+fileFormatVersion: 2
+guid: cca588d899effeb4786f4d7fb68f893c
+timeCreated: 1474018164
+licenseType: Store
+DefaultImporter:
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 111163
+  packageName: Drone Controller PRO
+  packageVersion: 2.0
+  assetPath: Assets/Packages/DroneController/Scenes/Drone-Phantom.unity
+  uploadId: 597116

@@ -1,0 +1,14 @@
+fileFormatVersion: 2
+guid: c779f2618148d8841af6c95b87911640
+PrefabImporter:
+  externalObjects: {}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 111163
+  packageName: Drone Controller PRO
+  packageVersion: 2.0
+  assetPath: Assets/Packages/DroneController/Prefabs/Managers/InputManager.prefab
+  uploadId: 597116
