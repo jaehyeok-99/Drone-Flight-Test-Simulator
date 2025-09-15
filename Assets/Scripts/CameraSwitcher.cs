@@ -78,6 +78,12 @@ public class CameraSwitcher : MonoBehaviour
             firstPersonCam.gameObject.SetActive(false);
             player.GetComponent<StarterAssets.ThirdPersonController>().enabled = true;
 
+            // 캐릭터 애니메이션 속도를 1로 되돌립니다.
+            if (player.GetComponent<Animator>() != null)
+            {
+                player.GetComponent<Animator>().speed = 1;
+            }
+
             if (droneUICanvas != null)
             {
                 droneUICanvas.SetActive(false);
