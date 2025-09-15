@@ -13,17 +13,13 @@ public class CameraSwitcher : MonoBehaviour
     public PropellerMovement propellerMovement;
     public AudioController audioController;
 
-    // 드론 사운드를 직접 제어하기 위한 AudioSource
     public AudioSource droneAudioSource;
-
-    // 캐릭터 발소리를 직접 제어하기 위한 AudioSource
     public AudioSource characterFootstepAudio;
 
-    // 드론 UI를 담고 있는 전체 캔버스를 참조합니다.
     public GameObject droneUICanvas;
-
-    // 드론의 속도와 높이를 표시할 TextMeshProUGUI 변수
     public TextMeshProUGUI droneStatusText;
+
+    public TextMeshProUGUI activationMessageText;
 
     private bool isThirdPerson = true;
     private bool isPlayerInRange = false;
@@ -51,7 +47,6 @@ public class CameraSwitcher : MonoBehaviour
             SwitchMode();
         }
 
-        // 드론 모드일 때만 속도와 고도 UI를 업데이트합니다.
         if (!isThirdPerson && droneController != null)
         {
             Rigidbody rb = droneController.GetComponent<Rigidbody>();
@@ -60,6 +55,33 @@ public class CameraSwitcher : MonoBehaviour
                 float currentSpeed = rb.linearVelocity.magnitude;
                 float currentAltitude = droneController.transform.position.y;
                 droneStatusText.text = $"Speed: {currentSpeed:F2} m/s\nAltitude: {currentAltitude:F2} m";
+            }
+        }
+
+        // 특정 키(P)를 누르면 드론 시동/정지
+        if (!isThirdPerson && Input.GetKeyDown(KeyCode.P))
+        {
+            // 드론이 현재 활성화 상태면, 비활성화합니다.
+            if (droneController != null && droneController.enabled)
+            {
+                DeactivateDrone();
+
+                // 드론이 꺼졌을 때는 다시 활성화 메시지가 나타나지 않게 합니다.
+                if (activationMessageText != null)
+                {
+                    activationMessageText.gameObject.SetActive(false);
+                }
+            }
+            // 드론이 비활성화 상태면, 시동을 겁니다.
+            else
+            {
+                // P키를 누르면 깜빡임을 멈추고 메시지를 비활성화합니다.
+                StopCoroutine("BlinkText");
+                if (activationMessageText != null)
+                {
+                    activationMessageText.gameObject.SetActive(false);
+                }
+                StartCoroutine(ActivateDroneScriptsWithDelay());
             }
         }
     }
@@ -73,12 +95,10 @@ public class CameraSwitcher : MonoBehaviour
     {
         if (isThirdPerson)
         {
-            // 플레이어 모드
             thirdPersonCam.gameObject.SetActive(true);
             firstPersonCam.gameObject.SetActive(false);
             player.GetComponent<StarterAssets.ThirdPersonController>().enabled = true;
 
-            // 캐릭터 애니메이션 속도를 1로 되돌립니다.
             if (player.GetComponent<Animator>() != null)
             {
                 player.GetComponent<Animator>().speed = 1;
@@ -89,38 +109,15 @@ public class CameraSwitcher : MonoBehaviour
                 droneUICanvas.SetActive(false);
             }
 
-            if (droneController != null)
-            {
-                droneController.enabled = false;
-                droneController.transform.position = droneInitialPosition;
-                droneController.transform.rotation = droneInitialRotation;
-                Rigidbody rb = droneController.GetComponent<Rigidbody>();
-                if (rb != null)
-                {
-                    rb.linearVelocity = Vector3.zero;
-                    rb.angularVelocity = Vector3.zero;
-                }
-            }
-            if (propellerMovement != null)
-                propellerMovement.enabled = false;
-
-            if (audioController != null)
-            {
-                audioController.enabled = false;
-            }
-            if (droneAudioSource != null && droneAudioSource.isPlaying)
-            {
-                droneAudioSource.Stop();
-            }
+            DeactivateDrone();
+            StopCoroutine("BlinkText");
         }
-        else // 드론 모드로 전환될 때
+        else
         {
-            // 드론 모드
             thirdPersonCam.gameObject.SetActive(false);
             firstPersonCam.gameObject.SetActive(true);
             player.GetComponent<StarterAssets.ThirdPersonController>().enabled = false;
 
-            // 캐릭터 애니메이션과 소리를 즉시 멈춥니다.
             if (player.GetComponent<Animator>() != null)
             {
                 player.GetComponent<Animator>().speed = 0;
@@ -135,11 +132,15 @@ public class CameraSwitcher : MonoBehaviour
                 droneUICanvas.SetActive(true);
             }
 
-            StartCoroutine(ActivateDroneScriptsWithDelay());
+            if (activationMessageText != null)
+            {
+                activationMessageText.gameObject.SetActive(true);
+                StartCoroutine("BlinkText");
+            }
         }
     }
 
-    IEnumerator ActivateDroneScriptsWithDelay()
+    void DeactivateDrone()
     {
         if (droneController != null)
             droneController.enabled = false;
@@ -148,11 +149,14 @@ public class CameraSwitcher : MonoBehaviour
         if (audioController != null)
             audioController.enabled = false;
 
-        if (droneAudioSource != null)
+        if (droneAudioSource != null && droneAudioSource.isPlaying)
         {
             droneAudioSource.Stop();
         }
+    }
 
+    IEnumerator ActivateDroneScriptsWithDelay()
+    {
         yield return new WaitForSeconds(activationDelay);
 
         if (droneController != null)
@@ -165,6 +169,17 @@ public class CameraSwitcher : MonoBehaviour
         if (droneAudioSource != null)
         {
             droneAudioSource.Play();
+        }
+    }
+
+    IEnumerator BlinkText()
+    {
+        while (true)
+        {
+            activationMessageText.gameObject.SetActive(true);
+            yield return new WaitForSeconds(0.5f);
+            activationMessageText.gameObject.SetActive(false);
+            yield return new WaitForSeconds(0.5f);
         }
     }
 }
