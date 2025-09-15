@@ -13,6 +13,12 @@ public class CameraSwitcher : MonoBehaviour
     public PropellerMovement propellerMovement;
     public AudioController audioController;
 
+    // 드론 사운드를 직접 제어하기 위한 AudioSource
+    public AudioSource droneAudioSource;
+
+    // 캐릭터 발소리를 직접 제어하기 위한 AudioSource
+    public AudioSource characterFootstepAudio;
+
     // 드론 UI를 담고 있는 전체 캔버스를 참조합니다.
     public GameObject droneUICanvas;
 
@@ -91,19 +97,32 @@ public class CameraSwitcher : MonoBehaviour
             }
             if (propellerMovement != null)
                 propellerMovement.enabled = false;
+
             if (audioController != null)
             {
                 audioController.enabled = false;
-                if (audioController.GetType().GetMethod("Stop") != null)
-                    audioController.SendMessage("Stop");
+            }
+            if (droneAudioSource != null && droneAudioSource.isPlaying)
+            {
+                droneAudioSource.Stop();
             }
         }
-        else
+        else // 드론 모드로 전환될 때
         {
             // 드론 모드
             thirdPersonCam.gameObject.SetActive(false);
             firstPersonCam.gameObject.SetActive(true);
             player.GetComponent<StarterAssets.ThirdPersonController>().enabled = false;
+
+            // 캐릭터 애니메이션과 소리를 즉시 멈춥니다.
+            if (player.GetComponent<Animator>() != null)
+            {
+                player.GetComponent<Animator>().speed = 0;
+            }
+            if (characterFootstepAudio != null && characterFootstepAudio.isPlaying)
+            {
+                characterFootstepAudio.Stop();
+            }
 
             if (droneUICanvas != null)
             {
@@ -123,6 +142,11 @@ public class CameraSwitcher : MonoBehaviour
         if (audioController != null)
             audioController.enabled = false;
 
+        if (droneAudioSource != null)
+        {
+            droneAudioSource.Stop();
+        }
+
         yield return new WaitForSeconds(activationDelay);
 
         if (droneController != null)
@@ -131,5 +155,10 @@ public class CameraSwitcher : MonoBehaviour
             propellerMovement.enabled = true;
         if (audioController != null)
             audioController.enabled = true;
+
+        if (droneAudioSource != null)
+        {
+            droneAudioSource.Play();
+        }
     }
 }
