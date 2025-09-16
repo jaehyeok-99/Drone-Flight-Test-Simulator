@@ -803,9 +803,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   pauseMenuUI: {fileID: 1715347758}
-  thirdPersonController: {fileID: 1812117085}
-  droneAudioSource: {fileID: 423975803}
-  propellerMovement: {fileID: 1285879680}
+  thirdPersonController: {fileID: 0}
+  droneAudioSource: {fileID: 0}
+  propellerMovement: {fileID: 0}
+  cameraSwitcher: {fileID: 0}
 --- !u!1 &344851141 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 919132149155446097, guid: d533fedf6aa28c445b043e8e0a1dd418, type: 3}
@@ -8598,17 +8599,6 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: 974238578668270704, guid: c708a3b79cd542b42bbfedb17e213bc1, type: 3}
   m_PrefabInstance: {fileID: 1322395720}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &1812117085 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 974238578668270715, guid: c708a3b79cd542b42bbfedb17e213bc1, type: 3}
-  m_PrefabInstance: {fileID: 1322395720}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1812117081}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 26e54e5a728a9234ab24fcf1460ed8a2, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1 &1834391619 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 919132149155446097, guid: a9033eaa63a26db4e98fd40331701607, type: 3}
