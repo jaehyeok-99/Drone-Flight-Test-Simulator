@@ -2,7 +2,7 @@ using UnityEngine;
 using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 using StarterAssets;
-using DroneController; // PropellerMovement를 사용하기 위해 추가
+using DroneController; 
 
 public class PauseMenu : MonoBehaviour
 {
@@ -11,7 +11,7 @@ public class PauseMenu : MonoBehaviour
 
     public ThirdPersonController thirdPersonController;
     public AudioSource droneAudioSource;
-    public PropellerMovement propellerMovement; // 새로 추가된 변수
+    public PropellerMovement propellerMovement;
 
     private string previousSceneName;
 
@@ -41,7 +41,6 @@ public class PauseMenu : MonoBehaviour
         Time.timeScale = 1f;
         GameIsPaused = false;
 
-        // 게임 재개 시 스크립트와 오디오, 프로펠러를 다시 활성화합니다.
         if (thirdPersonController != null)
         {
             thirdPersonController.enabled = true;
@@ -62,7 +61,6 @@ public class PauseMenu : MonoBehaviour
         Time.timeScale = 0f;
         GameIsPaused = true;
 
-        // 게임 일시정지 시 스크립트와 오디오, 프로펠러를 비활성화합니다.
         if (thirdPersonController != null)
         {
             thirdPersonController.enabled = false;
@@ -80,7 +78,7 @@ public class PauseMenu : MonoBehaviour
     public void LoadHomeScene()
     {
         Time.timeScale = 1f;
-        SceneManager.LoadScene("HomeSceneName");
+        SceneManager.LoadScene("HOME");
     }
 
     public void RestartScene()
@@ -89,9 +87,4 @@ public class PauseMenu : MonoBehaviour
         SceneManager.LoadScene(SceneManager.GetActiveScene().name);
     }
 
-    public void GoBack()
-    {
-        Time.timeScale = 1f;
-        SceneManager.LoadScene(previousSceneName);
-    }
 }
