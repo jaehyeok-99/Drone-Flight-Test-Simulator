@@ -1,24 +1,14 @@
 using UnityEngine;
 using UnityEngine.SceneManagement;
 using UnityEngine.UI;
-using StarterAssets;
-using DroneController; 
 
 public class PauseMenu : MonoBehaviour
 {
     public GameObject pauseMenuUI;
     public static bool GameIsPaused = false;
 
-    public ThirdPersonController thirdPersonController;
-    public AudioSource droneAudioSource;
-    public PropellerMovement propellerMovement;
-
-    private string previousSceneName;
-
-    void Awake()
-    {
-        previousSceneName = SceneManager.GetActiveScene().name;
-    }
+    // CameraSwitcher 스크립트 참조
+    public CameraSwitcher cameraSwitcher;
 
     void Update()
     {
@@ -26,59 +16,39 @@ public class PauseMenu : MonoBehaviour
         {
             if (GameIsPaused)
             {
-                Resume();
+                ResumeGame();
             }
             else
             {
-                Pause();
+                PauseGame();
             }
         }
     }
 
-    public void Resume()
+    public void ResumeGame()
     {
         pauseMenuUI.SetActive(false);
         Time.timeScale = 1f;
         GameIsPaused = false;
 
-        if (thirdPersonController != null)
+        // 게임을 재개할 때, CameraSwitcher에게 상태를 복원하도록 요청합니다.
+        if (cameraSwitcher != null)
         {
-            thirdPersonController.enabled = true;
-        }
-        if (droneAudioSource != null)
-        {
-            droneAudioSource.Play();
-        }
-        if (propellerMovement != null)
-        {
-            propellerMovement.enabled = true;
+            cameraSwitcher.RestoreState();
         }
     }
 
-    void Pause()
+    void PauseGame()
     {
         pauseMenuUI.SetActive(true);
         Time.timeScale = 0f;
         GameIsPaused = true;
-
-        if (thirdPersonController != null)
-        {
-            thirdPersonController.enabled = false;
-        }
-        if (droneAudioSource != null)
-        {
-            droneAudioSource.Stop();
-        }
-        if (propellerMovement != null)
-        {
-            propellerMovement.enabled = false;
-        }
     }
 
     public void LoadHomeScene()
     {
         Time.timeScale = 1f;
-        SceneManager.LoadScene("HOME");
+        SceneManager.LoadScene("Home");
     }
 
     public void RestartScene()
@@ -86,5 +56,4 @@ public class PauseMenu : MonoBehaviour
         Time.timeScale = 1f;
         SceneManager.LoadScene(SceneManager.GetActiveScene().name);
     }
-
 }
