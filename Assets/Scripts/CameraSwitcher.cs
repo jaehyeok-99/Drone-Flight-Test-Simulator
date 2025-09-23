@@ -39,6 +39,13 @@ public class CameraSwitcher : MonoBehaviour
         SwitchMode();
     }
 
+    public void RestoreState()
+    {
+        // 현재 상태(isThirdPerson)에 따라 모든 스크립트를 재활성화합니다.
+        // 이렇게 하면 PauseMenu의 영향을 받지 않고 올바른 상태로 돌아갑니다.
+        SwitchMode();
+    }
+
     void Update()
     {
         if ((isPlayerInRange || !isThirdPerson) && Input.GetKeyDown(KeyCode.T))
@@ -58,24 +65,18 @@ public class CameraSwitcher : MonoBehaviour
             }
         }
 
-        // 특정 키(P)를 누르면 드론 시동/정지
         if (!isThirdPerson && Input.GetKeyDown(KeyCode.P))
         {
-            // 드론이 현재 활성화 상태면, 비활성화합니다.
             if (droneController != null && droneController.enabled)
             {
                 DeactivateDrone();
-
-                // 드론이 꺼졌을 때는 다시 활성화 메시지가 나타나지 않게 합니다.
                 if (activationMessageText != null)
                 {
                     activationMessageText.gameObject.SetActive(false);
                 }
             }
-            // 드론이 비활성화 상태면, 시동을 겁니다.
             else
             {
-                // P키를 누르면 깜빡임을 멈추고 메시지를 비활성화합니다.
                 StopCoroutine("BlinkText");
                 if (activationMessageText != null)
                 {
