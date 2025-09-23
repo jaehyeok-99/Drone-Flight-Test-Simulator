@@ -1123,12 +1123,24 @@ PrefabInstance:
       value: 150
       objectReference: {fileID: 0}
     - target: {fileID: 8193438402376578178, guid: 2bf31dc81afeaa94db9190f1bbbd3830, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 8193438402376578178, guid: 2bf31dc81afeaa94db9190f1bbbd3830, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
       objectReference: {fileID: 2139673124}
     - target: {fileID: 8193438402376578178, guid: 2bf31dc81afeaa94db9190f1bbbd3830, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
-      value: ShowModeSelectPanel
+      value: LoadSceneByName
+      objectReference: {fileID: 0}
+    - target: {fileID: 8193438402376578178, guid: 2bf31dc81afeaa94db9190f1bbbd3830, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
+      value: introManager, Assembly-CSharp
+      objectReference: {fileID: 0}
+    - target: {fileID: 8193438402376578178, guid: 2bf31dc81afeaa94db9190f1bbbd3830, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_StringArgument
+      value: Type1Test
       objectReference: {fileID: 0}
     - target: {fileID: 8210702237836195643, guid: 2bf31dc81afeaa94db9190f1bbbd3830, type: 3}
       propertyPath: m_Pivot.x
